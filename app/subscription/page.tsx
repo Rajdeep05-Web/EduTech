@@ -226,7 +226,7 @@ export default function SubscriptionPage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" onClick={() => handleSubscribe("Basic", 19.99)} disabled={isProcessing}>
+                <Button className="w-full" onClick={() => handleSubscribe("Basic", 1499 / 85)} disabled={isProcessing}>
                   {isProcessing ? "Processing..." : "Subscribe Now"}
                 </Button>
               </CardFooter>
@@ -268,7 +268,7 @@ export default function SubscriptionPage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" onClick={() => handleSubscribe("Standard", 39.99)} disabled={isProcessing}>
+                <Button className="w-full" onClick={() => handleSubscribe("Standard", 2999 / 85)} disabled={isProcessing}>
                   {isProcessing ? "Processing..." : "Subscribe Now"}
                 </Button>
               </CardFooter>
@@ -307,7 +307,7 @@ export default function SubscriptionPage() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" onClick={() => handleSubscribe("Premium", 79.99)} disabled={isProcessing}>
+                <Button className="w-full" onClick={() => handleSubscribe("Premium", 5999 / 85)} disabled={isProcessing}>
                   {isProcessing ? "Processing..." : "Subscribe Now"}
                 </Button>
               </CardFooter>

@@ -241,7 +241,7 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                   </p>
                 </div>
                 <Button onClick={handlePurchase}>
-                  {isSubscribed ? "Access Course" : `Purchase for ₹${(courseData.price * 75).toFixed(2)}`}
+                  {isSubscribed ? "Access Course" : `Purchase for ₹${(courseData.price * 85).toFixed(2)}`}
                 </Button>
                 {!isSubscribed && (
                   <Button variant="outline" className="mt-2" onClick={() => router.push("/subscription")}>
@@ -431,10 +431,10 @@ export default function CourseDetailPage({ params }: { params: { id: string } })
                     <div className="text-3xl font-bold text-green-600">Free</div>
                   ) : (
                     <>
-                      <div className="text-3xl font-bold">₹{(courseData.price * 75).toFixed(2)}</div>
+                      <div className="text-3xl font-bold">₹{(courseData.price * 85).toFixed(2)}</div>
                       {courseData.originalPrice && (
                         <div className="text-muted-foreground line-through">
-                          ₹{(courseData.originalPrice * 75).toFixed(2)}
+                          ₹{(courseData.originalPrice * 85).toFixed(2)}
                         </div>
                       )}
                     </>

@@ -20,6 +20,7 @@ export default function WalletPage() {
 
   useEffect(() => {
     const currentUser = getCurrentUser()
+    console.log("Current User:", currentUser)
     if (currentUser) {
       setUser(currentUser)
       setBalance(currentUser.balance || 0)
@@ -46,7 +47,7 @@ export default function WalletPage() {
 
     // Simulate processing delay
     setTimeout(() => {
-      const amountToAdd = Number(amount)
+      const amountToAdd = Number(amount)/85
       const newBalance = balance + amountToAdd
 
       if (user) {
@@ -72,7 +73,7 @@ export default function WalletPage() {
 
         toast({
           title: "Funds added successfully",
-          description: `₹${(amountToAdd * 75).toFixed(2)} has been added to your wallet`,
+          description: `₹${(amountToAdd * 85).toFixed(2)} has been added to your wallet`,
         })
       }
     }, 1500)
@@ -106,7 +107,7 @@ export default function WalletPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-4xl font-bold">₹{(balance * 75).toFixed(2)}</div>
+              <div className="text-4xl font-bold">₹{(balance * 85).toFixed(2)}</div>
             </CardContent>
           </Card>
         </div>
@@ -235,7 +236,7 @@ export default function WalletPage() {
                         <div
                           className={`font-medium ${transaction.type === "deposit" ? "text-green-600" : "text-red-600"}`}
                         >
-                          {transaction.type === "deposit" ? "+" : "-"}₹{(transaction.amount * 75).toFixed(2)}
+                          {transaction.type === "deposit" ? "+" : "-"}₹{(transaction.amount * 85).toFixed(2)}
                         </div>
                       </div>
                     ))}

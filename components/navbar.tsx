@@ -140,7 +140,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <div className="hidden md:flex items-center gap-2 text-sm">
                 <span className="text-muted-foreground">Balance:</span>
-                <span className="font-medium">₹{user?.balance?.toFixed(2) || "0.00"}</span>
+                <span className="font-medium">₹{user?.balance?.toFixed(2) * 85 || "0.00"}</span>
               </div>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

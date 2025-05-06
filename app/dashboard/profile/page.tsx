@@ -179,7 +179,7 @@ export default function ProfilePage() {
 
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">Account Balance</h3>
-                <div className="text-2xl font-bold">₹{(user.balance * 75).toFixed(2)}</div>
+                <div className="text-2xl font-bold">₹{(user.balance * 85).toFixed(2)}</div>
                 <Button variant="outline" size="sm" className="w-full" onClick={() => router.push("/dashboard/wallet")}>
                   Manage Wallet
                 </Button>

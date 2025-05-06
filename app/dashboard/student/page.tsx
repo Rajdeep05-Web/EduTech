@@ -121,7 +121,7 @@ export default function StudentDashboardPage() {
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
               <span className="text-sm text-muted-foreground">Wallet Balance</span>
-              <span className="font-bold">₹{balance.toFixed(2)}</span>
+              <span className="font-bold">₹{(balance * 85).toFixed(2)}</span>
             </div>
             <Button variant="outline">Add Funds</Button>
           </div>
